@@ -35,6 +35,31 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $artistNom;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $labelNom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $telephone;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -122,5 +147,65 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(string $nom): self
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function getArtistNom(): ?string
+    {
+        return $this->artistNom;
+    }
+
+    public function setArtistNom(?string $artistNom): self
+    {
+        $this->artistNom = $artistNom;
+
+        return $this;
+    }
+
+    public function getLabelNom(): ?string
+    {
+        return $this->labelNom;
+    }
+
+    public function setLabelNom(?string $labelNom): self
+    {
+        $this->labelNom = $labelNom;
+
+        return $this;
+    }
+
+    public function getTelephone(): ?string
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(string $telephone): self
+    {
+        $this->telephone = $telephone;
+
+        return $this;
     }
 }

@@ -10,12 +10,11 @@
                 <div class="col sliding-container m-0 p-0">
                     <div class="swiper-container  mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="{{ asset('img/blaaz.png') }}" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{ asset('img/blaaz.png') }}" alt="">
-                            </div>
+                            {% for slide in slidePub %}
+                                <div class="swiper-slide">
+                                    <img src="/slidePub/{{ slide.imageSlidePub }}" alt="">
+                                </div>
+                            {% endfor %}
                         </div>
                     </div>
 
@@ -41,7 +40,11 @@
 
     <section class="nouveautes">
         <div class="container">
+            <div class="row">
+                <div class="col">
 
+                </div>
+            </div>
         </div>
     </section>
 
