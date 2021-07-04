@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+    <section class="sliding bg-dark" style="max-height: 20%;">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col sliding-container m-0 p-0">
+                    <div class="swiper-container  mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="{{ asset('img/blaaz.png') }}" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('img/blaaz.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <div class="sliding-part-custom">
+                        <h4>
+                            Ensemble valorisons la musique béninoise
+                        </h4>
+                        <div class="d-flex justify-content-between py-5  hero-btn-custom">
+                            <a href="" class="btn  btn-hero mb-2 mb-md-0  btn-lg btn-block h6" >Commencer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Nouveautés-->
+
+    <section class="nouveautes">
+        <div class="container">
+
+        </div>
+    </section>
+
+
+
+
+{% endblock %}
